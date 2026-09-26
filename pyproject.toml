@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nisqa"
+version = "1.0.0+oye"
+description = "NISQA library and model interface for speech quality assessment"
+readme = "README.md"
+authors = [
+    { name = "Gabriel Mittag" }
+]
+keywords = ["speech", "audio", "quality-assessment", "nisqa", "deep-learning"]
+requires-python = ">=3.12"
+
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nisqa*"]
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.isort]
+line_length = 120

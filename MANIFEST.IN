@@ -1,0 +1,11 @@
+# Include all Python source files in the nisqa directory
+recursive-include nisqa *.py
+
+# Include model weight tarballs
+recursive-include nisqa *.tar
+
+# Exclude training and prediction/run scripts specifically
+recursive-exclude nisqa *train*.py
+recursive-exclude nisqa *predict*.py
+recursive-exclude nisqa *run*.py
+recursive-exclude nisqa *dataset*.py
